@@ -14,9 +14,9 @@ INSTALLATION                                               *rubyformatter-instal
 You can use a plugin manager like:
 
 vim-plug:
-<
-    Plug 'MiroslavDionisiev/rubyformatter.vim
 >
+    Plug 'MiroslavDionisiev/rubyformatter.vim
+<
 
 Or you can clone the repo.
 
