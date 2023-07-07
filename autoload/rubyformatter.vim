@@ -5,15 +5,13 @@ let s:col_end = -1
 let s:selected_text = ""
 
 function! rubyformatter#Format(range) abort
-	let current_selected_text = rubyformatter#GetSelectedText()
-
-	if s:line_start == -1
+	if a:range == 0 && s:line_start == -1
 		echom "Nothing selected"
 		return
 	endif
 
 	if a:range != 0
-		let s:selected_text = current_selected_text
+		let s:selected_text = rubyformatter#GetSelectedText()
 	endif
 
 	let match_pattern = 0

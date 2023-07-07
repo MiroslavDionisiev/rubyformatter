@@ -25,11 +25,41 @@ USAGE                                      *rubyformatter-usage* *:Format*
 
 The plugin's purpose is to format code selections according to syntax rules and
 conventions of the Ruby language.
+
 The plugin has a single command |:Format|. When the command is executed with
 selected text it tries to format according to the described rules in the plugin.
 After initial selection the selected text is remembered and further executions of
 |:Format| are applied on the same text changing it to next syntax correct representation.
 Currently the plugin maintains rules for formatting code block, curly brackets and hash keys.
+
+Usage examples:
+1. Curly brackets
+>
+    - { text1, text2 }
+    - {
+      text1,
+      text2
+      }
+<
+
+2. Interpolation
+>
+    - #{text}
+<
+
+3. String keys and symbol keys
+>
+    - "text" =>
+    - text:
+<
+
+4. Code blocks
+>
+    - [1, 2, 3].each { |num| puts num }
+    - [1, 2, 3].each do |num|
+      puts num
+      end
+<
 
 ==============================================================================
 ISSUES                                                           *rubyformatter-issues*
